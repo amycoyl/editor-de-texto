@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Ejercicio Editor de Texto</title>
+    <meta charset="utf-8">
+    <script>
+        function formato() {
+
+            var tam_texto;
+            tam_texto = parseInt(document.getElementById("tamanyo").value);
+            document.getElementById("editor").style.fontSize = tam_texto + "pt";
+
+            var tipo_texto;
+            tipo_texto = document.getElementById("tipo").value;
+            document.getElementById("editor").style.fontFamily = tipo_texto;
+
+            var color_texto;
+            color_texto = document.getElementById("color").value;
+            document.getElementById("editor").style.color = color_texto;
+        }
+    </script>
+</head>
+
+<body style="background-color:#008080;">
+
+    <hr  color="#000080">
+    <h1>
+        <marquee bgcolor="blue"> ¡¡Editor de Texto!! </marquee>
+    </h1>
+    <hr  color="#000080">
+
+	<center>
+    <div id="controles">
+        <strong>Tamaño del texto</strong>
+        <select id="tamanyo" onchange="formato()">
+                        <option value="8">8</option>
+                        <option value="10">10</option>
+                        <option value="12">12</option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                        <option value="20">20</option>
+						<option value="24">24</option>
+                        </select>
+        <strong>Tipo de Tamaño</strong>
+        <select id="tipo" onchange="formato()">
+                        <option value="arial">arial</option>
+                        <option value="verdana">verdana</option>
+                        <option value="geneva">geneva</option>
+                        <option value="georgia">georgia</option>
+                        </select>
+        <strong>Color de Texto</strong>
+        <select id="color" onchange="formato()">
+                        <option value="#FA8072">salmon</option>
+                        <option value="#CCCCCC">gris</option>
+                        <option value="#6699FF">azul</option>
+                        <option value="#FFFF00">amarillo</option>
+                        </select>
+		</div>
+		
+        <br><br>
+
+        <h2>Editor de Texto:</h2>
+        <textarea id="editor" cols="40" rows="5"></textarea>
+
+</body>
+</html>
